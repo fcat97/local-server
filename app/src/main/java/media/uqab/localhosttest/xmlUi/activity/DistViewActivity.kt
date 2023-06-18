@@ -7,12 +7,12 @@ import android.os.Bundle
 import android.util.Log
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.LinearLayout
 import androidx.activity.ComponentActivity
 import androidx.lifecycle.lifecycleScope
 import com.tos.libLocalServer.ServerState
 import kotlinx.coroutines.launch
 import media.uqab.localhosttest.DistHelper
-import media.uqab.localhosttest.R
 import media.uqab.localhosttest.data.server.ServerProvider
 
 class DistViewActivity: ComponentActivity() {
@@ -21,9 +21,13 @@ class DistViewActivity: ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dist_view)
-
-        webView = findViewById(R.id.webView)
+        webView = WebView(this)
+        val params = LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT,
+            LinearLayout.LayoutParams.MATCH_PARENT
+        )
+        webView.layoutParams = params
+        setContentView(webView)
 
         webView.apply {
             @SuppressLint("SetJavaScriptEnabled")
@@ -42,7 +46,6 @@ class DistViewActivity: ComponentActivity() {
         }
 
         val distName = url.substringAfterLast("/").replace(".zip", "")
-
 
 
         distHelper = DistHelper(this)
