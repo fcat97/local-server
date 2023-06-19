@@ -12,7 +12,7 @@ import media.uqab.localhosttest.DistHelper
 import media.uqab.localhosttest.MyApp
 import media.uqab.localhosttest.data.UiEvent
 import media.uqab.localhosttest.data.model.Dist
-import media.uqab.localhosttest.data.server.ServerProvider
+import com.tos.libLocalServer.ServerProvider
 
 
 class HomeViewModel: ScreenModel {

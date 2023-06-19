@@ -58,7 +58,7 @@ import com.tos.libLocalServer.ServerState
 import media.uqab.localhosttest.R
 import media.uqab.localhosttest.data.UiEvent
 import media.uqab.localhosttest.data.model.Dist
-import media.uqab.localhosttest.data.server.ServerProvider
+import com.tos.libLocalServer.ServerProvider
 import media.uqab.localhosttest.composeUi.theme.serverUpColor
 import media.uqab.localhosttest.composeUi.viewModel.HomeViewModel
 

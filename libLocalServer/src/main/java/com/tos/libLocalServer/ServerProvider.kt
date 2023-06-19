@@ -1,6 +1,5 @@
-package media.uqab.localhosttest.data.server
+package com.tos.libLocalServer
 
-import com.tos.libLocalServer.ServerState
 import com.tos.libLocalServer.nano.NanoServer
 
 object ServerProvider {

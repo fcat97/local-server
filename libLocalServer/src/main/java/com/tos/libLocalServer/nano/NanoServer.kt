@@ -12,7 +12,7 @@ import java.io.FileInputStream
  *
  * @author github/fCat97
  */
-class NanoServer: Server {
+internal class NanoServer: Server {
     companion object {
         private const val TAG = "NanoServer"
         private const val PORT = 9099

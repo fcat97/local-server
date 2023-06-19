@@ -13,7 +13,7 @@ import androidx.lifecycle.lifecycleScope
 import com.tos.libLocalServer.ServerState
 import kotlinx.coroutines.launch
 import media.uqab.localhosttest.DistHelper
-import media.uqab.localhosttest.data.server.ServerProvider
+import com.tos.libLocalServer.ServerProvider
 
 class DistViewActivity: ComponentActivity() {
     private lateinit var webView: WebView

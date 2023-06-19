@@ -69,6 +69,6 @@ dependencies {
     implementation("cafe.adriel.voyager:voyager-transitions:$voyagerVersion")
     implementation("cafe.adriel.voyager:voyager-androidx:$voyagerVersion")
 
-//     implementation(project(":libLocalServer"))
-    implementation 'com.github.fcat97:local-server:1.0.5'
+    implementation(project(":libLocalServer"))
+    //implementation 'com.github.fcat97:local-server:1.0.5'
 }
