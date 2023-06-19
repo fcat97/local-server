@@ -41,8 +41,7 @@ class DistViewActivity: ComponentActivity() {
 
         val url = intent.getStringExtra(EXTRA_DIST_URL)
         if (url.isNullOrBlank()) {
-            finish()
-            return
+            throw IllegalStateException("no url passed!")
         }
 
         val distName = url.substringAfterLast("/").replace(".zip", "")
