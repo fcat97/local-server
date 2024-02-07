@@ -54,13 +54,13 @@ import cafe.adriel.voyager.core.model.rememberScreenModel
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import com.tos.libLocalServer.ServerProvider
 import com.tos.libLocalServer.ServerState
 import media.uqab.localhosttest.R
-import media.uqab.localhosttest.data.UiEvent
-import media.uqab.localhosttest.data.model.Dist
-import com.tos.libLocalServer.ServerProvider
 import media.uqab.localhosttest.composeUi.theme.serverUpColor
 import media.uqab.localhosttest.composeUi.viewModel.HomeViewModel
+import media.uqab.localhosttest.data.UiEvent
+import media.uqab.localhosttest.data.model.Dist
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -167,7 +167,7 @@ private fun HomeScreen(viewModel: HomeViewModel) {
                 AnimatedVisibility(visible = viewModel.availableDistFiles.isNotEmpty()) {
 
                     OutlinedButton(onClick = {
-                        pickDistDirLauncher.launch(null)
+                        pickDistDirLauncher.launch(arrayOf("application/zip"))
                     }) {
                         Text(text = "Import Dist")
                     }

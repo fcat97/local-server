@@ -224,7 +224,7 @@ class DistHelper(private val context: Context) {
             val zf = File(cacheDir, zipFile.name!!)
             copyFile(zipFile.uri, zf)
 
-            val res = extractZipFile(zf, extractDir)
+            val res = extractZipFile(zf, extractDir, true)
             zf.delete()
 
             res
